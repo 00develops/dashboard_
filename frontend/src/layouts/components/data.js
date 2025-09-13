@@ -1,5 +1,5 @@
-import { TbBellRinging, TbCreditCard, TbHeadset, TbLock, TbLogout2, TbSettings2, TbUserCircle } from 'react-icons/tb';
-import { LuBookUser, LuCalendar, LuChartPie, LuCircleGauge, LuCommand, LuFingerprint, LuLayers2, LuMapPin, LuNotebookText, LuPencilRuler, LuShieldBan, LuSparkles, LuSquarePi, LuTable2 } from 'react-icons/lu';
+import { TbBellRinging, TbCreditCard, TbHeadset, TbLock, TbLogout2, TbSettings2, TbUserCircle,TbUsersGroup } from 'react-icons/tb';
+import { LuBookUser, LuCalendar, LuChartPie, LuCircleGauge, LuCommand, LuFingerprint, LuLayers2, LuMapPin, LuNotebookText, LuPencilRuler, LuShieldBan, LuSparkles, LuSquarePi, LuTable2, } from 'react-icons/lu';
 export const userDropdownItems = [{
   label: 'Welcome back!',
   isHeader: true
@@ -40,7 +40,20 @@ export const menuItems = [{
   label: 'Dashboard',
   icon: LuCircleGauge,
   url: '/dashboard'
-}, {
+}, 
+
+//manpower
+{ key: 'manpower',
+  label: 'Manpower',
+  icon: TbUsersGroup,
+  url: '/manpower'
+},
+
+
+
+
+
+{
   key: 'ton-ai',
   label: 'Ton AI',
   icon: LuSparkles,

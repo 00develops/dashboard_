@@ -68,6 +68,9 @@ const TablerIcons = lazy(() => import('@/views/icons/tabler'));
 // Maps
 const VectorMap = lazy(() => import('@/views/maps/vector'));
 const LeafletMap = lazy(() => import('@/views/maps/leaflet'));
+
+//manpower
+const ManPower=lazy(() => import('@/views/manpower'));
 const authRoutes = [{
   path: '/auth/sign-in',
   element: <AuthSignIn />
@@ -208,12 +211,22 @@ const mapRoutes = [{
   path: '/maps/leaflet',
   element: <LeafletMap />
 }];
+
+
+
+
+
+//route for manpower
+const ManPowerRoutes= [{
+  path: '/manpower',
+  element: <ManPower /> // change to actual com
+}];
 const allRoutes = [{
   element: <MainLayout />,
   children: [{
     path: '/',
     element: <Navigate to="/auth/sign-in" replace />
-  }, ...dashboardRoutes, ...appsRoutes, ...pagesRoutes, ...uiRoutes, ...graphRoutes, ...formRoutes, ...tableRoutes, ...iconRoutes, ...mapRoutes]
+  }, ...dashboardRoutes, ...appsRoutes, ...pagesRoutes, ...uiRoutes, ...graphRoutes, ...formRoutes, ...tableRoutes, ...iconRoutes, ...mapRoutes,...ManPowerRoutes]
 }];
 const otherRoutes = [...authRoutes, ...errorRoutes];
 export const routes = [...allRoutes, ...otherRoutes];
