@@ -74,22 +74,7 @@ const ManPower=lazy(() => import('@/views/manpower'));
 const authRoutes = [{
   path: '/auth/sign-in',
   element: <AuthSignIn />
-}, {
-  path: '/auth/sign-up',
-  element: <AuthSignUp />
-}, {
-  path: '/auth/reset-password',
-  element: <AuthResetPassword />
-}, {
-  path: '/auth/new-password',
-  element: <AuthNewPassword />
-}, {
-  path: '/auth/two-factor',
-  element: <AuthTwoFactor />
-}, {
-  path: '/auth/lock-screen',
-  element: <AuthLockScreen />
-}];
+} ];
 const errorRoutes = [{
   path: '/error/404',
   element: <Error404 />
@@ -225,7 +210,7 @@ const allRoutes = [{
   element: <MainLayout />,
   children: [{
     path: '/',
-    element: <Navigate to="/auth/sign-in" replace />
+    element: <Navigate to="/auth/sign-in" replace/>
   }, ...dashboardRoutes, ...appsRoutes, ...pagesRoutes, ...uiRoutes, ...graphRoutes, ...formRoutes, ...tableRoutes, ...iconRoutes, ...mapRoutes,...ManPowerRoutes]
 }];
 const otherRoutes = [...authRoutes, ...errorRoutes];

@@ -25,7 +25,7 @@ const tabContents = [{
 }];
 const DefaultTabs = () => {
   return <>
-            <h5 className="mb-2 pb-1">Default Tabs </h5>
+            <h5 className="mb-2 pb-1 ">Default Tabs </h5>
             <TabContainer defaultActiveKey="Activity">
                 <Nav className="nav-tabs mb-3">
                     {(tabContents || []).slice(0, 3).map((tab, idx) => {

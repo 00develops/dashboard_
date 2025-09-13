@@ -15,13 +15,22 @@ const Page = () => {
                                 <CardBody>
                                     <div className="auth-brand mb-4">
                                         <AppLogo />
-                                        <p className="text-muted w-lg-75 mt-3">Let’s get you signed in. Enter your email
-                                            and
-                                            password to continue.</p>
+                                        <p className="text-muted w-lg-75 mt-3"> Enter your email and password to continue.</p>
                                     </div>
 
                                     <div className="">
                                         <Form>
+                                            <FormGroup className="mb-3">
+                                                <FormLabel htmlFor="loginAs">
+                                                    Login as <span className="text-danger">*</span>
+                                                </FormLabel>
+                                                <FormControl as="select" id="loginAs" required>
+                                                    <option value="">Select role</option>
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="Tellecaller">Tellecaller</option>
+                                                    <option value="Manager">Manager</option>
+                                                </FormControl>
+                                            </FormGroup>
                                             <FormGroup className="mb-3">
                                                 <FormLabel htmlFor="userEmail">
                                                     Email<span className="text-danger">*</span>
@@ -36,26 +45,26 @@ const Page = () => {
                                                 <FormControl type="password" id="userPassword" placeholder="••••••••" required />
                                             </FormGroup>
 
-                                            <div className="d-flex justify-content-between align-items-center mb-3">
+                                            {/* <div className="d-flex justify-content-between align-items-center mb-3">
                                                 <FormCheck className="fs-14" type="checkbox" label="Keep me signed in" />
                                                 <Link to="/auth/reset-password" className="text-decoration-underline link-offset-3 text-muted">
                                                     Forgot Password?
-                                                </Link>
-                                            </div>
+                                                </Link> 
+                                            </div>*/}
 
                                             <div className="d-grid">
-                                                <Button variant="primary" type="submit" className="fw-semibold py-2">
+                                                <Button variant="primary" type="submit" className="fw-semibold py-2 " href='/dashboard'>
                                                     Sign In
                                                 </Button>
                                             </div>
                                         </Form>
 
-                                        <p className="text-muted text-center mt-4 mb-0">
+                                        {/* <p className="text-muted text-center mt-4 mb-0">
                                             New here?{' '}
                                             <Link to="/auth/sign-up" className="text-decoration-underline link-offset-3 fw-semibold">
                                                 Create an account
                                             </Link>
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </CardBody>
                             </Card>
